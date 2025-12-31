@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="TRACE" monitorInterval="30">
+    <Appenders>
+        <!-- Console Appender - logs to console/terminal -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+
+        <!-- File Appender - logs to file -->
+        <!-- Using File instead of RollingFile for simpler debugging -->
+        <File name="FileAppender" 
+              fileName="${sys:user.dir}/logs/automation.log"
+              immediateFlush="true"
+              append="true">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+
+        <!-- Error File Appender - only logs ERROR and FATAL -->
+        <!-- Using File instead of RollingFile for simpler debugging -->
+        <File name="ErrorFileAppender" 
+              fileName="${sys:user.dir}/logs/errors.log"
+              immediateFlush="true"
+              append="true">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
+            <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <!-- Root logger - applies to all loggers -->
+        <Root level="INFO">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileAppender"/>
+            <AppenderRef ref="ErrorFileAppender"/>
+        </Root>
+
+        <!-- Selenium WebDriver logs - reduce noise -->
+        <Logger name="org.openqa.selenium" level="WARN" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileAppender"/>
+        </Logger>
+
+        <!-- WebDriverManager logs - reduce noise -->
+        <Logger name="io.github.bonigarcia.wdm" level="WARN" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileAppender"/>
+        </Logger>
+
+        <!-- Your project packages - more detailed logging -->
+        <Logger name="org.guerdy.lambert" level="DEBUG" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileAppender"/>
+            <AppenderRef ref="ErrorFileAppender"/>
+        </Logger>
+    </Loggers>
+</Configuration>
+

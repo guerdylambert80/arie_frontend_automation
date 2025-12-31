@@ -1,0 +1,9 @@
+Exception: element not interactable
+  (Session info: chrome=143.0.7499.170)
+Build info: version: '4.37.0', revision: '3c1da1e342'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.6.1', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [156c6e2c754be323c9badb1cb8824e00, sendKeysToElement {value=[Ljava.lang.CharSequence;@3ed0918d, id=f.0C92C9599702A9DBA78177130660F134.d.2E2DB0C8E9D1BA4C1E9AA7B479DAC3D2.e.84}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.169 (164b20aab62..., userDataDir: /var/folders/r4/yxv_jt19277...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59787}, goog:processID: 46929, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59787/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (156c6e2c754be323c9badb1cb8824e00)] -> xpath: //span[text()='browse']]
+Session ID: 156c6e2c754be323c9badb1cb8824e00

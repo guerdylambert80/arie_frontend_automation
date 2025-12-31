@@ -1,0 +1,67 @@
+2025-12-30 17:26:15 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2025-12-30 17:26:15 [main] INFO  org.guerdy.lambert.base.BaseTest - Starting test suite: arie_frontend_automation
+2025-12-30 17:26:15 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2025-12-30 17:26:20 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2025-12-30 17:26:20 [main] INFO  org.guerdy.lambert.base.BaseTest - STARTING TEST: Login_with_right_emailNpassowrd
+2025-12-30 17:26:20 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2025-12-30 17:26:20 [main] INFO  org.guerdy.lambert.tests.LoginTest - Starting Login process with right email and password
+2025-12-30 17:26:21 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Email: subscribed@1.com entered successfully
+2025-12-30 17:26:21 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Password entered entered successfully (length: 9)
+2025-12-30 17:26:21 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Login button clicked successfully
+2025-12-30 17:26:21 [main] DEBUG org.guerdy.lambert.pages.LoginPage - User, subscribed@1.com, logged in successful
+2025-12-30 17:26:21 [main] INFO  org.guerdy.lambert.base.BaseTest - Test PASSED: Login_with_right_emailNpassowrd
+2025-12-30 17:26:21 [main] INFO  org.guerdy.lambert.base.BaseTest - Screenshot captured: /Users/gmac09/coding/arie_frontend_automation/src/test/java/resources/screenshots/Login_with_right_emailNpassowrd_PASS_2025-12-30_17-26-21.png
+2025-12-30 17:26:21 [main] INFO  org.guerdy.lambert.base.BaseTest - Success screenshot saved: /Users/gmac09/coding/arie_frontend_automation/src/test/java/resources/screenshots/Login_with_right_emailNpassowrd_PASS_2025-12-30_17-26-21.png
+2025-12-30 17:26:21 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2025-12-30 17:26:21 [main] INFO  org.guerdy.lambert.base.BaseTest - Finished test suite: arie_frontend_automation
+2025-12-30 17:26:21 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2025-12-30 17:26:21 [main] INFO  org.guerdy.lambert.base.BaseTest - ExtentReports flushed in AfterSuite
+2025-12-30 17:59:39 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2025-12-30 17:59:39 [main] INFO  org.guerdy.lambert.base.BaseTest - Starting test suite: arie_frontend_automation
+2025-12-30 17:59:39 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2025-12-30 17:59:43 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2025-12-30 17:59:43 [main] INFO  org.guerdy.lambert.base.BaseTest - STARTING TEST: Login_with_right_emailNpassowrd
+2025-12-30 17:59:43 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2025-12-30 17:59:43 [main] INFO  org.guerdy.lambert.tests.LoginTest - Starting Login process with right email and password
+2025-12-30 17:59:43 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Email: subscribed@1.com entered successfully
+2025-12-30 17:59:43 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Password entered entered successfully (length: 9)
+2025-12-30 17:59:43 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Login button clicked successfully
+2025-12-30 17:59:43 [main] DEBUG org.guerdy.lambert.pages.LoginPage - User, subscribed@1.com, logged in successful
+2025-12-30 17:59:43 [main] INFO  org.guerdy.lambert.base.BaseTest - Test PASSED: Login_with_right_emailNpassowrd
+2025-12-30 17:59:44 [main] INFO  org.guerdy.lambert.base.BaseTest - Screenshot captured: /Users/gmac09/coding/arie_frontend_automation/src/test/java/resources/screenshots/Login_with_right_emailNpassowrd_PASS_2025-12-30_17-59-43.png
+2025-12-30 17:59:44 [main] INFO  org.guerdy.lambert.base.BaseTest - Success screenshot saved: /Users/gmac09/coding/arie_frontend_automation/src/test/java/resources/screenshots/Login_with_right_emailNpassowrd_PASS_2025-12-30_17-59-43.png
+2025-12-30 17:59:44 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2025-12-30 17:59:44 [main] INFO  org.guerdy.lambert.base.BaseTest - Finished test suite: arie_frontend_automation
+2025-12-30 17:59:44 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2025-12-30 17:59:44 [main] INFO  org.guerdy.lambert.base.BaseTest - ExtentReports flushed in AfterSuite
+2025-12-30 18:14:59 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2025-12-30 18:14:59 [main] INFO  org.guerdy.lambert.base.BaseTest - Starting test suite: arie_frontend_automation
+2025-12-30 18:14:59 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2025-12-30 18:15:03 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2025-12-30 18:15:03 [main] INFO  org.guerdy.lambert.base.BaseTest - STARTING TEST: uploadFile
+2025-12-30 18:15:03 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2025-12-30 18:15:03 [main] INFO  org.guerdy.lambert.tests.DashboardTest - Upload file test started
+2025-12-30 18:15:03 [main] INFO  org.guerdy.lambert.pages.DashboardPage - Upload file test started
+2025-12-30 18:15:03 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Email: subscribed@1.com entered successfully
+2025-12-30 18:15:03 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Password entered entered successfully (length: 9)
+2025-12-30 18:15:03 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Login button clicked successfully
+2025-12-30 18:15:03 [main] DEBUG org.guerdy.lambert.pages.LoginPage - User, subscribed@1.com, logged in successful
+2025-12-30 18:15:03 [main] DEBUG org.guerdy.lambert.pages.DashboardPage - Waiting for the Upload button to be visible
+2025-12-30 18:15:06 [main] INFO  org.guerdy.lambert.utils.DashboardElementPage - Starting 1004 form upload process
+2025-12-30 18:15:06 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - Attempting to click upload button
+2025-12-30 18:15:06 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - Upload button is present and ready
+2025-12-30 18:15:06 [main] INFO  org.guerdy.lambert.utils.DashboardElementPage - Upload button clicked successfully
+2025-12-30 18:15:06 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - Upload button clicked
+2025-12-30 18:15:06 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - Waiting for file input element to be present
+2025-12-30 18:15:06 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - File input element found and ready
+2025-12-30 18:15:06 [main] INFO  org.guerdy.lambert.utils.DashboardElementPage - Preparing to upload file: /Users/gmac09/Desktop/Residential/Elizabeth- 873 Kilsyth Rd -1P.5b.col.3036.pdf
+2025-12-30 18:15:06 [main] INFO  org.guerdy.lambert.utils.DashboardElementPage - File path sent to input element successfully
+2025-12-30 18:15:06 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - Waiting for submit button to be visible
+2025-12-30 18:15:06 [main] INFO  org.guerdy.lambert.utils.DashboardElementPage - Submit button clicked - file upload process completed
+2025-12-30 18:15:06 [main] INFO  org.guerdy.lambert.base.BaseTest - Test PASSED: uploadFile
+2025-12-30 18:15:06 [main] INFO  org.guerdy.lambert.base.BaseTest - Screenshot captured: /Users/gmac09/coding/arie_frontend_automation/src/test/java/resources/screenshots/uploadFile_PASS_2025-12-30_18-15-06.png
+2025-12-30 18:15:06 [main] INFO  org.guerdy.lambert.base.BaseTest - Success screenshot saved: /Users/gmac09/coding/arie_frontend_automation/src/test/java/resources/screenshots/uploadFile_PASS_2025-12-30_18-15-06.png
+2025-12-30 18:15:06 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2025-12-30 18:15:06 [main] INFO  org.guerdy.lambert.base.BaseTest - Finished test suite: arie_frontend_automation
+2025-12-30 18:15:06 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2025-12-30 18:15:06 [main] INFO  org.guerdy.lambert.base.BaseTest - ExtentReports flushed in AfterSuite
