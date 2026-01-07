@@ -19,7 +19,9 @@ import org.openqa.selenium.TakesScreenshot;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.guerdy.lambert.utils.extentreports.ExtentManager;
 import org.guerdy.lambert.utils.listeners.TestListener;
 
@@ -64,20 +66,68 @@ public class BaseTest {
             uploadLocatorsProp.load(uploadLocatorsReader);
 
         }
-        if(configLocatorsProp.getProperty("browser").equalsIgnoreCase("chrome")) {
-            System.out.println( System.getProperty("user.dir"));
+        
+        // Determine browser: Priority: Environment variable > System property > config file
+        String browser = System.getenv("BROWSER");
+        if (browser == null || browser.isEmpty()) {
+            browser = System.getProperty("browser");
+        }
+        if (browser == null || browser.isEmpty()) {
+            browser = configLocatorsProp.getProperty("browser", "chrome");
+        }
+        browser = browser.toLowerCase();
+        
+        // Determine if headless mode: Priority: Environment variable > System property
+        boolean headless = Boolean.parseBoolean(System.getenv("HEADLESS"));
+        if (!headless) {
+            headless = Boolean.parseBoolean(System.getProperty("headless", "false"));
+        }
+        
+        log.info("Initializing browser: {} (headless: {})", browser, headless);
+        
+        if (browser.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();		//base
+            ChromeOptions options = new ChromeOptions();
+            
+            if (headless) {
+                options.addArguments("--headless");
+                options.addArguments("--no-sandbox");
+                options.addArguments("--disable-dev-shm-usage");
+                options.addArguments("--disable-gpu");
+                options.addArguments("--window-size=1920,1080");
+                log.info("Chrome running in headless mode");
+            }
+            
+            driver = new ChromeDriver(options);
             driver.get(configLocatorsProp.getProperty("url"));
-            driver.manage().window().maximize();
+            
+            if (!headless) {
+                driver.manage().window().maximize();
+            }
         }
-        else if(configLocatorsProp.getProperty("browser").equalsIgnoreCase("firefox")) {
-            System.out.println( System.getProperty("user.dir"));
+        else if (browser.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
-            driver = new FirefoxDriver();
+            FirefoxOptions options = new FirefoxOptions();
+            
+            if (headless) {
+                options.addArguments("--headless");
+                options.addArguments("--width=1920");
+                options.addArguments("--height=1080");
+                log.info("Firefox running in headless mode");
+            }
+            
+            driver = new FirefoxDriver(options);
             driver.get(configLocatorsProp.getProperty("url"));
+            
+            if (!headless) {
+                driver.manage().window().maximize();
+            }
         }
-
+        else {
+            throw new IllegalArgumentException("Unsupported browser: " + browser + ". Supported: chrome, firefox");
+        }
+        
+        log.info("Browser initialized successfully: {}", browser);
     }
 
     public void takeScreenshot(String methodName) throws IOException {

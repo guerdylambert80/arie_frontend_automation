@@ -18,7 +18,7 @@ public class LoginTest extends BaseTest {
     private static final Logger logger = LogManager.getLogger(LoginTest.class);
 
     @Test(enabled = true, description = "Login with right email and password")
-    public void Login_with_right_emailNpassowrd() throws InterruptedException {
+    public void Login_with_right_emailNpassword() throws InterruptedException {
 
         logger.info("Starting Login process with right email and password");
         // startTest adds this test to the extent report

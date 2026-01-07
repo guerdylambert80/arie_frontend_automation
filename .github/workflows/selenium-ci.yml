@@ -1,0 +1,175 @@
+name: Selenium Test Automation CI/CD
+
+# ============================================
+# WHEN DOES THIS WORKFLOW RUN?
+# ============================================
+on:
+  # Trigger on push to these branches
+  push:
+    branches: [ main, master, develop ]
+  
+  # Trigger on pull requests to these branches
+  pull_request:
+    branches: [ main, master ]
+  
+  # Schedule: Run daily at 2 AM UTC (cron syntax)
+  schedule:
+    - cron: '0 2 * * *'
+  
+  # Manual trigger: Allows you to run the workflow from GitHub UI
+  workflow_dispatch:
+
+# ============================================
+# JOBS: What the workflow will do
+# ============================================
+jobs:
+  # Job 1: Run Selenium Tests
+  selenium-tests:
+    name: Run Selenium Tests
+    runs-on: ubuntu-latest  # GitHub-hosted Ubuntu runner
+    
+    # Matrix strategy: Run tests across multiple configurations
+    strategy:
+      fail-fast: false  # Don't stop all if one fails
+      matrix:
+        browser: [chrome, firefox]  # Test on Chrome and Firefox
+        # You can add more browsers: [chrome, firefox, edge]
+    
+    # Steps: What to do in this job
+    steps:
+      # Step 1: Get the code from repository - Download the code to the runner
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+      
+      # Step 2: Set up Java (your project uses Java 21) - Installs Java 21 - Caches Maven dependencies
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'  # Eclipse Temurin (OpenJDK)
+          cache: 'maven'  # Cache Maven dependencies for faster builds
+      
+      # Step 3: Cache Maven dependencies (speeds up builds) - Reuse them if pom.xml hasn't changed - don't download dependencies every run
+      - name: Cache Maven dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-m2-
+      
+      # Step 4: Set up Chrome browser - Install Chrome browser - Only runs if `matrix.browser == 'chrome'`
+      - name: Setup Chrome browser
+        if: matrix.browser == 'chrome'
+        uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: 'stable'
+      
+      # Step 5: Set up Firefox browser - Install Chrome Firefox - Only runs if `matrix.browser == 'firefox'`
+      - name: Setup Firefox browser
+        if: matrix.browser == 'firefox'
+        uses: browser-actions/setup-firefox@v1
+        with:
+          firefox-version: 'latest'
+      
+      # Step 6: Install system dependencies (for headless browsers) - Installs Linux libraries needed for browsers
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libxss1 \
+            libappindicator1 \
+            libindicator7 \
+            fonts-liberation \
+            libasound2 \
+            libnspr4 \
+            libnss3 \
+            libx11-xcb1 \
+            libxcomposite1 \
+            libxcursor1 \
+            libxdamage1 \
+            libxi6 \
+            libxtst6 \
+            xdg-utils
+      
+      # Step 7: Run Maven tests with browser-specific configuration
+      - name: Run Selenium tests with ${{ matrix.browser }}
+        env:
+          BROWSER: ${{ matrix.browser }}
+          HEADLESS: 'true'  # Run in headless mode (no GUI)
+          CI: 'true'  # Indicates we're in CI environment
+        run: |
+          # Set browser in config or use system property
+          mvn clean test \
+            -Dbrowser=${{ matrix.browser }} \
+            -Dheadless=true \
+            -DskipTests=false
+      
+      # Step 8: Upload test reports (ExtentReports, screenshots, etc.)- Artifacts can be downloaded from GitHub UI
+      - name: Upload test reports and artifacts
+        uses: actions/upload-artifact@v4
+        if: always()  # Upload even if tests fail
+        with:
+          name: test-results-${{ matrix.browser }}
+          path: |
+            src/test/java/resources/reports/
+            src/test/java/resources/screenshots/
+            logs/
+            target/surefire-reports/
+          retention-days: 30  # Keep artifacts for 30 days
+      
+      # Step 9: Upload test logs
+      - name: Upload test logs
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-logs-${{ matrix.browser }}
+          path: logs/
+          retention-days: 7
+
+  # Job 2: Generate and publish test reports (runs after tests complete)
+  publish-reports:
+    name: Publish Test Reports
+    needs: selenium-tests  # Wait for selenium-tests job to complete
+    runs-on: ubuntu-latest
+    if: always()  # Run even if tests fail
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+      
+      # Download all test artifacts from previous job
+      - name: Download all test artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts/
+      
+      # Optionally publish to GitHub Pages (uncomment if needed)
+      # - name: Deploy reports to GitHub Pages
+      #   if: github.ref == 'refs/heads/main'
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: ./artifacts
+      #     keep_files: false
+
+  # Job 3: Notify on failure (optional - requires Slack/Email setup)
+  notify:
+    name: Send Notifications
+    needs: selenium-tests
+    runs-on: ubuntu-latest
+    if: failure()  # Only run if tests fail
+    
+    steps:
+      - name: Notify on test failure
+        run: |
+          echo "Tests failed! Check the workflow run for details."
+          # Add Slack/Email notification here if configured
+          # Example: curl -X POST -H 'Content-type: application/json' \
+          #   --data '{"text":"Tests failed!"}' $SLACK_WEBHOOK_URL

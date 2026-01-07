@@ -65,3 +65,63 @@
 2025-12-30 18:15:06 [main] INFO  org.guerdy.lambert.base.BaseTest - Finished test suite: arie_frontend_automation
 2025-12-30 18:15:06 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
 2025-12-30 18:15:06 [main] INFO  org.guerdy.lambert.base.BaseTest - ExtentReports flushed in AfterSuite
+2025-12-31 20:36:15 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2025-12-31 20:36:15 [main] INFO  org.guerdy.lambert.base.BaseTest - Starting test suite: arie_frontend_automation
+2025-12-31 20:36:15 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2025-12-31 20:36:15 [main] INFO  org.guerdy.lambert.base.BaseTest - Initializing browser: chrome (headless: false)
+2025-12-31 20:36:19 [main] INFO  org.guerdy.lambert.base.BaseTest - Browser initialized successfully: chrome
+2025-12-31 20:36:19 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2025-12-31 20:36:19 [main] INFO  org.guerdy.lambert.base.BaseTest - STARTING TEST: Login_with_right_emailNpassword
+2025-12-31 20:36:19 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2025-12-31 20:36:19 [main] INFO  org.guerdy.lambert.tests.LoginTest - Starting Login process with right email and password
+2025-12-31 20:36:20 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Email: subscribed@1.com entered successfully
+2025-12-31 20:36:20 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Password entered entered successfully (length: 9)
+2025-12-31 20:36:20 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Login button clicked successfully
+2025-12-31 20:36:20 [main] DEBUG org.guerdy.lambert.pages.LoginPage - User, subscribed@1.com, logged in successful
+2025-12-31 20:36:20 [main] INFO  org.guerdy.lambert.base.BaseTest - Test PASSED: Login_with_right_emailNpassword
+2025-12-31 20:36:20 [main] INFO  org.guerdy.lambert.base.BaseTest - Screenshot captured: /Users/gmac09/coding/arie_frontend_automation/src/test/java/resources/screenshots/Login_with_right_emailNpassword_PASS_2025-12-31_20-36-20.png
+2025-12-31 20:36:20 [main] INFO  org.guerdy.lambert.base.BaseTest - Success screenshot saved: /Users/gmac09/coding/arie_frontend_automation/src/test/java/resources/screenshots/Login_with_right_emailNpassword_PASS_2025-12-31_20-36-20.png
+2025-12-31 20:36:20 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2025-12-31 20:36:20 [main] INFO  org.guerdy.lambert.base.BaseTest - Finished test suite: arie_frontend_automation
+2025-12-31 20:36:20 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2025-12-31 20:36:20 [main] INFO  org.guerdy.lambert.base.BaseTest - ExtentReports flushed in AfterSuite
+2026-01-02 15:43:17 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-02 15:43:17 [main] INFO  org.guerdy.lambert.base.BaseTest - Starting test suite: arie_frontend_automation
+2026-01-02 15:43:17 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-02 15:43:17 [main] INFO  org.guerdy.lambert.base.BaseTest - Initializing browser: chrome (headless: false)
+2026-01-02 15:43:21 [main] INFO  org.guerdy.lambert.base.BaseTest - Browser initialized successfully: chrome
+2026-01-02 15:43:21 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-02 15:43:21 [main] INFO  org.guerdy.lambert.base.BaseTest - STARTING TEST: Login_with_right_emailNpassword
+2026-01-02 15:43:21 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-02 15:43:21 [main] INFO  org.guerdy.lambert.tests.LoginTest - Starting Login process with right email and password
+2026-01-02 15:43:22 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Email: subscribed@1.com entered successfully
+2026-01-02 15:43:22 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Password entered entered successfully (length: 9)
+2026-01-02 15:43:22 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Login button clicked successfully
+2026-01-02 15:43:22 [main] DEBUG org.guerdy.lambert.pages.LoginPage - User, subscribed@1.com, logged in successful
+2026-01-02 15:43:22 [main] INFO  org.guerdy.lambert.base.BaseTest - Test PASSED: Login_with_right_emailNpassword
+2026-01-02 15:43:22 [main] INFO  org.guerdy.lambert.base.BaseTest - Screenshot captured: /Users/gmac09/coding/arie_frontend_automation/src/test/java/resources/screenshots/Login_with_right_emailNpassword_PASS_2026-01-02_15-43-22.png
+2026-01-02 15:43:22 [main] INFO  org.guerdy.lambert.base.BaseTest - Success screenshot saved: /Users/gmac09/coding/arie_frontend_automation/src/test/java/resources/screenshots/Login_with_right_emailNpassword_PASS_2026-01-02_15-43-22.png
+2026-01-02 15:43:22 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-02 15:43:22 [main] INFO  org.guerdy.lambert.base.BaseTest - Finished test suite: arie_frontend_automation
+2026-01-02 15:43:22 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-02 15:43:22 [main] INFO  org.guerdy.lambert.base.BaseTest - ExtentReports flushed in AfterSuite
+2026-01-02 15:44:08 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-02 15:44:08 [main] INFO  org.guerdy.lambert.base.BaseTest - Starting test suite: arie_frontend_automation
+2026-01-02 15:44:08 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-02 15:44:08 [main] INFO  org.guerdy.lambert.base.BaseTest - Initializing browser: chrome (headless: false)
+2026-01-02 15:44:11 [main] INFO  org.guerdy.lambert.base.BaseTest - Browser initialized successfully: chrome
+2026-01-02 15:44:11 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-02 15:44:11 [main] INFO  org.guerdy.lambert.base.BaseTest - STARTING TEST: Login_with_right_emailNpassword
+2026-01-02 15:44:11 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-02 15:44:11 [main] INFO  org.guerdy.lambert.tests.LoginTest - Starting Login process with right email and password
+2026-01-02 15:44:11 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Email: subscribed@1.com entered successfully
+2026-01-02 15:44:11 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Password entered entered successfully (length: 9)
+2026-01-02 15:44:11 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Login button clicked successfully
+2026-01-02 15:44:11 [main] DEBUG org.guerdy.lambert.pages.LoginPage - User, subscribed@1.com, logged in successful
+2026-01-02 15:44:11 [main] INFO  org.guerdy.lambert.base.BaseTest - Test PASSED: Login_with_right_emailNpassword
+2026-01-02 15:44:12 [main] INFO  org.guerdy.lambert.base.BaseTest - Screenshot captured: /Users/gmac09/coding/arie_frontend_automation/src/test/java/resources/screenshots/Login_with_right_emailNpassword_PASS_2026-01-02_15-44-11.png
+2026-01-02 15:44:12 [main] INFO  org.guerdy.lambert.base.BaseTest - Success screenshot saved: /Users/gmac09/coding/arie_frontend_automation/src/test/java/resources/screenshots/Login_with_right_emailNpassword_PASS_2026-01-02_15-44-11.png
+2026-01-02 15:44:12 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-02 15:44:12 [main] INFO  org.guerdy.lambert.base.BaseTest - Finished test suite: arie_frontend_automation
+2026-01-02 15:44:12 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-02 15:44:12 [main] INFO  org.guerdy.lambert.base.BaseTest - ExtentReports flushed in AfterSuite
