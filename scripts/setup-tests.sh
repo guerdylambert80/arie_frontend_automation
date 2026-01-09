@@ -23,10 +23,8 @@ sudo apt-get install -y \
     unzip \
     curl \
     libxss1 \
-    libappindicator1 \
     libindicator7 \
     fonts-liberation \
-    libasound2 \
     libnspr4 \
     libnss3 \
     libx11-xcb1 \
@@ -37,6 +35,9 @@ sudo apt-get install -y \
     libxtst6 \
     xdg-utils \
     xvfb  # Virtual display for headless mode
+
+# Note: libappindicator1 and libasound2 are deprecated/removed in newer Ubuntu versions
+# They are not required for headless browser execution, so they have been removed
 
 echo "System dependencies installed successfully!"
 

@@ -76,21 +76,27 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt-get update
+          # Install core dependencies (required for headless browsers)
           sudo apt-get install -y \
-            libxss1 \
-            libappindicator1 \
-            libindicator7 \
-            fonts-liberation \
-            libasound2 \
+            libatk-bridge2.0-0 \
+            libatk1.0-0 \
+            libcups2 \
+            libdrm2 \
+            libgbm1 \
+            libgtk-3-0 \
             libnspr4 \
             libnss3 \
-            libx11-xcb1 \
             libxcomposite1 \
-            libxcursor1 \
             libxdamage1 \
-            libxi6 \
-            libxtst6 \
+            libxfixes3 \
+            libxrandr2 \
             xdg-utils
+          # Install optional dependencies (may vary by Ubuntu version)
+          # Try newer package names first, fall back to older ones if needed
+          sudo apt-get install -y libasound2t64 2>/dev/null || \
+          sudo apt-get install -y libasound2 2>/dev/null || \
+          echo "Note: libasound2 not available (not critical for headless mode)"
+          # libappindicator is deprecated and not needed for headless browsers
       
       # Step 7: Run Maven tests with browser-specific configuration
       - name: Run Selenium tests with ${{ matrix.browser }}
