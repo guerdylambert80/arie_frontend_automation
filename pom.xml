@@ -253,6 +253,10 @@
 						<allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
 						<spring.autoconfigure.exclude>org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration,org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration</spring.autoconfigure.exclude>
 					</systemPropertyVariables>
+					<!-- Exclude Spring Boot context test - not needed for Selenium automation -->
+					<excludes>
+						<exclude>**/ArieFrontendAutomationApplicationTests.java</exclude>
+					</excludes>
 				</configuration>
 			</plugin>
 
