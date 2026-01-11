@@ -9,6 +9,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import resources.retry.RetryHandler;
+
 import java.io.IOException;
 import java.time.Duration;
 
@@ -18,6 +20,8 @@ import static org.guerdy.lambert.utils.LoginElementPage.*;
 public class LoginPage extends BaseTest {
 
     private static final Logger logger = LogManager.getLogger(LoginPage.class);
+    protected final RetryHandler retryHandler = new RetryHandler(driver);
+
 
     public DashboardPage Login_with_right_emailNpassword(String email, String password) throws InterruptedException {
 
