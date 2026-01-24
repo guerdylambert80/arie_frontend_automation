@@ -36,7 +36,8 @@ public class BaseTest {
     
     private static final Logger log = LogManager.getLogger(BaseTest.class);
     @Getter
-    public static WebDriver driver;
+    //public static WebDriver driver;
+    private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
     public static Properties configLocatorsProp = new Properties();
     public static Properties loginLocatorsProp = new Properties();
@@ -97,12 +98,15 @@ public class BaseTest {
                 options.addArguments("--window-size=1920,1080");
                 log.info("Chrome running in headless mode");
             }
-            
-            driver = new ChromeDriver(options);
-            driver.get(configLocatorsProp.getProperty("url"));
+
+            //driver = new ChromeDriver(options);
+            driver.set(new ChromeDriver(options));
+            //driver.get(configLocatorsProp.getProperty("url"));
+            driver.get().get(configLocatorsProp.getProperty("url"));
             
             if (!headless) {
-                driver.manage().window().maximize();
+                //driver.manage().window().maximize();
+                driver.get().manage().window().maximize();
             }
         }
         else if (browser.equalsIgnoreCase("firefox")) {
@@ -116,11 +120,14 @@ public class BaseTest {
                 log.info("Firefox running in headless mode");
             }
             
-            driver = new FirefoxDriver(options);
-            driver.get(configLocatorsProp.getProperty("url"));
+            //driver = new FirefoxDriver(options);
+            driver.set(new FirefoxDriver(options));
+            //driver.get(configLocatorsProp.getProperty("url"));
+            driver.get().get(configLocatorsProp.getProperty("url"));
             
             if (!headless) {
-                driver.manage().window().maximize();
+                //driver.manage().window().maximize();
+                driver.get().manage().window().maximize();
             }
         }
         else {

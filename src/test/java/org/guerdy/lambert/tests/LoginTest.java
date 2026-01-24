@@ -18,6 +18,7 @@ public class LoginTest extends BaseTest {
     DashboardPage dashboardPage = new DashboardPage();
     private static final Logger logger = LogManager.getLogger(LoginTest.class);
 
+    // should_DisplaySuccessMessage_When_ValidRegistrationData
     @Test(enabled = true, description = "Login with right email and password"
         , dataProvider = "validCredentials")
     public void Login_with_right_emailNpassword(String email, String password) throws InterruptedException {
@@ -29,6 +30,8 @@ public class LoginTest extends BaseTest {
         dashboardPage=loginPage.Login_with_right_emailNpassword(email, password);
 
     }
+
+
 
     @DataProvider(name = "validCredentials")
     public Object[][] getValidCredentials() {

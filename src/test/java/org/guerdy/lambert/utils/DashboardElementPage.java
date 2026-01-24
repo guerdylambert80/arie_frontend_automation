@@ -4,9 +4,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.guerdy.lambert.base.BaseTest;
 import org.guerdy.lambert.pages.UploadPage;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -84,8 +85,10 @@ public class DashboardElementPage extends BaseTest {
             log.debug("File input element found and ready");
             
             // Use absolute path - convert relative path to absolute
-            String filePath = System.getProperty("user.home") + 
-                "/Desktop/Residential/Elizabeth- 873 Kilsyth Rd -1P.5b.col.3036.pdf";
+            String filePath = System.getProperty("user.home") +
+                    "/Desktop/Residential/Magny.pdf";
+                //"/Desktop/Residential/Elizabeth- 873 Kilsyth Rd -1P.5b.col.3036.pdf";
+
             log.info("Preparing to upload file: {}", filePath);
             
             // Send keys to the INPUT element, not the span
@@ -101,7 +104,23 @@ public class DashboardElementPage extends BaseTest {
                 )
             );
             submitBtn.click();
-            log.info("Submit button clicked - file upload process completed");
+            log.info("Submit button clicked - file upload in progress");
+
+            Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
+                    .withTimeout(Duration.ofSeconds(120))  // Total wait time
+                    .pollingEvery(Duration.ofSeconds(15))  // Check every 2 seconds
+                    .ignoring(NoSuchElementException.class)  // Ignore specific exceptions
+                    .ignoring(StaleElementReferenceException.class)
+                    .withMessage("Element not found within timeout");
+
+            // Using fluent wait
+            WebElement element = fluentWait.until(driver -> {
+                WebElement elem = driver.findElement(By.xpath(dashboardLocatorsProp.getProperty("upload_button")));
+                return elem.isDisplayed() ? elem : null;
+
+            });
+
+            log.info("File upload completed successfully");
             
         } catch (org.openqa.selenium.TimeoutException e) {
             log.error("Timeout waiting for element during file upload: {}", e.getMessage());

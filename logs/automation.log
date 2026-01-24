@@ -184,3 +184,133 @@
 2026-01-17 05:47:02 [main] INFO  org.guerdy.lambert.base.BaseTest - Finished test suite: arie_frontend_automation
 2026-01-17 05:47:02 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
 2026-01-17 05:47:02 [main] INFO  org.guerdy.lambert.base.BaseTest - ExtentReports flushed in AfterSuite
+2026-01-17 06:16:05 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-17 06:16:05 [main] INFO  org.guerdy.lambert.base.BaseTest - Starting test suite: arie_frontend_automation
+2026-01-17 06:16:05 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-17 06:16:05 [main] INFO  org.guerdy.lambert.base.BaseTest - Initializing browser: chrome (headless: false)
+2026-01-17 06:16:09 [main] INFO  org.guerdy.lambert.base.BaseTest - Browser initialized successfully: chrome
+2026-01-17 06:16:09 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-17 06:16:09 [main] INFO  org.guerdy.lambert.base.BaseTest - STARTING TEST: uploadFile
+2026-01-17 06:16:09 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-17 06:16:09 [main] INFO  org.guerdy.lambert.tests.DashboardTest - Upload file test started
+2026-01-17 06:16:10 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Email: subscribed@1.com entered successfully
+2026-01-17 06:16:10 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Password entered entered successfully (length: 9)
+2026-01-17 06:16:10 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Login button clicked successfully
+2026-01-17 06:16:10 [main] DEBUG org.guerdy.lambert.pages.LoginPage - User, subscribed@1.com, logged in successful
+2026-01-17 06:16:10 [main] DEBUG org.guerdy.lambert.pages.DashboardPage - Waiting for the Upload button to be visible
+2026-01-17 06:16:13 [main] INFO  org.guerdy.lambert.utils.DashboardElementPage - Starting 1004 form upload process
+2026-01-17 06:16:13 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - Attempting to click upload button
+2026-01-17 06:16:13 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - Upload button is present and ready
+2026-01-17 06:16:13 [main] INFO  org.guerdy.lambert.utils.DashboardElementPage - Upload button clicked successfully
+2026-01-17 06:16:13 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - Upload button clicked
+2026-01-17 06:16:13 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - Waiting for file input element to be present
+2026-01-17 06:16:13 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - File input element found and ready
+2026-01-17 06:16:13 [main] INFO  org.guerdy.lambert.utils.DashboardElementPage - Preparing to upload file: /Users/gmac09/Desktop/Residential/Elizabeth- 873 Kilsyth Rd -1P.5b.col.3036.pdf
+2026-01-17 06:16:13 [main] INFO  org.guerdy.lambert.utils.DashboardElementPage - File path sent to input element successfully
+2026-01-17 06:16:13 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - Waiting for submit button to be visible
+2026-01-17 06:16:13 [main] INFO  org.guerdy.lambert.utils.DashboardElementPage - Submit button clicked - file upload process completed
+2026-01-17 06:16:13 [main] INFO  org.guerdy.lambert.base.BaseTest - Test PASSED: uploadFile
+2026-01-17 06:16:13 [main] INFO  org.guerdy.lambert.base.BaseTest - Screenshot captured: /Users/gmac09/coding/arie_frontend_automation/src/test/java/resources/screenshots/uploadFile_PASS_2026-01-17_06-16-13.png
+2026-01-17 06:16:13 [main] INFO  org.guerdy.lambert.base.BaseTest - Success screenshot saved: /Users/gmac09/coding/arie_frontend_automation/src/test/java/resources/screenshots/uploadFile_PASS_2026-01-17_06-16-13.png
+2026-01-17 06:16:13 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-17 06:16:13 [main] INFO  org.guerdy.lambert.base.BaseTest - Finished test suite: arie_frontend_automation
+2026-01-17 06:16:13 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-17 06:16:13 [main] INFO  org.guerdy.lambert.base.BaseTest - ExtentReports flushed in AfterSuite
+2026-01-17 07:11:40 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-17 07:11:40 [main] INFO  org.guerdy.lambert.base.BaseTest - Starting test suite: arie_frontend_automation
+2026-01-17 07:11:40 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-17 07:11:40 [main] INFO  org.guerdy.lambert.base.BaseTest - Initializing browser: chrome (headless: false)
+2026-01-17 07:11:44 [main] INFO  org.guerdy.lambert.base.BaseTest - Browser initialized successfully: chrome
+2026-01-17 07:11:44 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-17 07:11:44 [main] INFO  org.guerdy.lambert.base.BaseTest - STARTING TEST: uploadFile
+2026-01-17 07:11:44 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-17 07:11:44 [main] INFO  org.guerdy.lambert.tests.DashboardTest - Upload file test started
+2026-01-17 07:11:44 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Email: subscribed@1.com entered successfully
+2026-01-17 07:11:44 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Password entered entered successfully (length: 9)
+2026-01-17 07:11:44 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Login button clicked successfully
+2026-01-17 07:11:44 [main] DEBUG org.guerdy.lambert.pages.LoginPage - User, subscribed@1.com, logged in successful
+2026-01-17 07:11:44 [main] DEBUG org.guerdy.lambert.pages.DashboardPage - Waiting for the Upload button to be visible
+2026-01-17 07:11:47 [main] INFO  org.guerdy.lambert.utils.DashboardElementPage - Starting 1004 form upload process
+2026-01-17 07:11:47 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - Attempting to click upload button
+2026-01-17 07:11:47 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - Upload button is present and ready
+2026-01-17 07:11:47 [main] INFO  org.guerdy.lambert.utils.DashboardElementPage - Upload button clicked successfully
+2026-01-17 07:11:47 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - Upload button clicked
+2026-01-17 07:11:47 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - Waiting for file input element to be present
+2026-01-17 07:11:47 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - File input element found and ready
+2026-01-17 07:11:47 [main] INFO  org.guerdy.lambert.utils.DashboardElementPage - Preparing to upload file: /Users/gmac09/Desktop/Residential/Magny.pdf
+2026-01-17 07:11:47 [main] INFO  org.guerdy.lambert.utils.DashboardElementPage - File path sent to input element successfully
+2026-01-17 07:11:47 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - Waiting for submit button to be visible
+2026-01-17 07:11:47 [main] INFO  org.guerdy.lambert.utils.DashboardElementPage - Submit button clicked - file upload process completed
+2026-01-17 07:11:47 [main] INFO  org.guerdy.lambert.base.BaseTest - Test PASSED: uploadFile
+2026-01-17 07:11:48 [main] INFO  org.guerdy.lambert.base.BaseTest - Screenshot captured: /Users/gmac09/coding/arie_frontend_automation/src/test/java/resources/screenshots/uploadFile_PASS_2026-01-17_07-11-47.png
+2026-01-17 07:11:48 [main] INFO  org.guerdy.lambert.base.BaseTest - Success screenshot saved: /Users/gmac09/coding/arie_frontend_automation/src/test/java/resources/screenshots/uploadFile_PASS_2026-01-17_07-11-47.png
+2026-01-17 07:11:48 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-17 07:11:48 [main] INFO  org.guerdy.lambert.base.BaseTest - Finished test suite: arie_frontend_automation
+2026-01-17 07:11:48 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-17 07:11:48 [main] INFO  org.guerdy.lambert.base.BaseTest - ExtentReports flushed in AfterSuite
+2026-01-17 07:49:05 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-17 07:49:05 [main] INFO  org.guerdy.lambert.base.BaseTest - Starting test suite: arie_frontend_automation
+2026-01-17 07:49:05 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-17 07:49:05 [main] INFO  org.guerdy.lambert.base.BaseTest - Initializing browser: chrome (headless: false)
+2026-01-17 07:49:08 [main] INFO  org.guerdy.lambert.base.BaseTest - Browser initialized successfully: chrome
+2026-01-17 07:49:08 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-17 07:49:08 [main] INFO  org.guerdy.lambert.base.BaseTest - STARTING TEST: uploadFile
+2026-01-17 07:49:08 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-17 07:49:08 [main] INFO  org.guerdy.lambert.tests.DashboardTest - Upload file test started
+2026-01-17 07:49:08 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Email: subscribed@1.com entered successfully
+2026-01-17 07:49:08 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Password entered entered successfully (length: 9)
+2026-01-17 07:49:08 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Login button clicked successfully
+2026-01-17 07:49:08 [main] DEBUG org.guerdy.lambert.pages.LoginPage - User, subscribed@1.com, logged in successful
+2026-01-17 07:49:08 [main] DEBUG org.guerdy.lambert.pages.DashboardPage - Waiting for the Upload button to be visible
+2026-01-17 07:49:11 [main] INFO  org.guerdy.lambert.utils.DashboardElementPage - Starting 1004 form upload process
+2026-01-17 07:49:11 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - Attempting to click upload button
+2026-01-17 07:49:11 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - Upload button is present and ready
+2026-01-17 07:49:11 [main] INFO  org.guerdy.lambert.utils.DashboardElementPage - Upload button clicked successfully
+2026-01-17 07:49:11 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - Upload button clicked
+2026-01-17 07:49:11 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - Waiting for file input element to be present
+2026-01-17 07:49:11 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - File input element found and ready
+2026-01-17 07:49:11 [main] INFO  org.guerdy.lambert.utils.DashboardElementPage - Preparing to upload file: /Users/gmac09/Desktop/Residential/Magny.pdf
+2026-01-17 07:49:11 [main] INFO  org.guerdy.lambert.utils.DashboardElementPage - File path sent to input element successfully
+2026-01-17 07:49:11 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - Waiting for submit button to be visible
+2026-01-17 07:49:11 [main] INFO  org.guerdy.lambert.utils.DashboardElementPage - Submit button clicked - file upload in process
+2026-01-17 07:51:12 [main] INFO  org.guerdy.lambert.utils.DashboardElementPage - Submit button clicked - file upload process completed
+2026-01-17 07:51:12 [main] INFO  org.guerdy.lambert.base.BaseTest - Test PASSED: uploadFile
+2026-01-17 07:51:12 [main] INFO  org.guerdy.lambert.base.BaseTest - Screenshot captured: /Users/gmac09/coding/arie_frontend_automation/src/test/java/resources/screenshots/uploadFile_PASS_2026-01-17_07-51-12.png
+2026-01-17 07:51:12 [main] INFO  org.guerdy.lambert.base.BaseTest - Success screenshot saved: /Users/gmac09/coding/arie_frontend_automation/src/test/java/resources/screenshots/uploadFile_PASS_2026-01-17_07-51-12.png
+2026-01-17 07:51:12 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-17 07:51:12 [main] INFO  org.guerdy.lambert.base.BaseTest - Finished test suite: arie_frontend_automation
+2026-01-17 07:51:12 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-17 07:51:12 [main] INFO  org.guerdy.lambert.base.BaseTest - ExtentReports flushed in AfterSuite
+2026-01-17 07:58:26 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-17 07:58:26 [main] INFO  org.guerdy.lambert.base.BaseTest - Starting test suite: arie_frontend_automation
+2026-01-17 07:58:26 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-17 07:58:26 [main] INFO  org.guerdy.lambert.base.BaseTest - Initializing browser: chrome (headless: false)
+2026-01-17 07:58:30 [main] INFO  org.guerdy.lambert.base.BaseTest - Browser initialized successfully: chrome
+2026-01-17 07:58:30 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-17 07:58:30 [main] INFO  org.guerdy.lambert.base.BaseTest - STARTING TEST: uploadFile
+2026-01-17 07:58:30 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-17 07:58:30 [main] INFO  org.guerdy.lambert.tests.DashboardTest - Upload file test started
+2026-01-17 07:58:30 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Email: subscribed@1.com entered successfully
+2026-01-17 07:58:30 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Password entered entered successfully (length: 9)
+2026-01-17 07:58:30 [main] DEBUG org.guerdy.lambert.pages.LoginPage - Login button clicked successfully
+2026-01-17 07:58:30 [main] DEBUG org.guerdy.lambert.pages.LoginPage - User, subscribed@1.com, logged in successful
+2026-01-17 07:58:30 [main] DEBUG org.guerdy.lambert.pages.DashboardPage - Waiting for the Upload button to be visible
+2026-01-17 07:58:33 [main] INFO  org.guerdy.lambert.utils.DashboardElementPage - Starting 1004 form upload process
+2026-01-17 07:58:33 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - Attempting to click upload button
+2026-01-17 07:58:33 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - Upload button is present and ready
+2026-01-17 07:58:33 [main] INFO  org.guerdy.lambert.utils.DashboardElementPage - Upload button clicked successfully
+2026-01-17 07:58:33 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - Upload button clicked
+2026-01-17 07:58:33 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - Waiting for file input element to be present
+2026-01-17 07:58:33 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - File input element found and ready
+2026-01-17 07:58:33 [main] INFO  org.guerdy.lambert.utils.DashboardElementPage - Preparing to upload file: /Users/gmac09/Desktop/Residential/Magny.pdf
+2026-01-17 07:58:33 [main] INFO  org.guerdy.lambert.utils.DashboardElementPage - File path sent to input element successfully
+2026-01-17 07:58:33 [main] DEBUG org.guerdy.lambert.utils.DashboardElementPage - Waiting for submit button to be visible
+2026-01-17 07:58:33 [main] INFO  org.guerdy.lambert.utils.DashboardElementPage - Submit button clicked - file upload in progress
+2026-01-17 08:00:03 [main] INFO  org.guerdy.lambert.utils.DashboardElementPage - File upload completed successfully
+2026-01-17 08:00:03 [main] INFO  org.guerdy.lambert.base.BaseTest - Test PASSED: uploadFile
+2026-01-17 08:00:04 [main] INFO  org.guerdy.lambert.base.BaseTest - Screenshot captured: /Users/gmac09/coding/arie_frontend_automation/src/test/java/resources/screenshots/uploadFile_PASS_2026-01-17_08-00-03.png
+2026-01-17 08:00:04 [main] INFO  org.guerdy.lambert.base.BaseTest - Success screenshot saved: /Users/gmac09/coding/arie_frontend_automation/src/test/java/resources/screenshots/uploadFile_PASS_2026-01-17_08-00-03.png
+2026-01-17 08:00:04 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-17 08:00:04 [main] INFO  org.guerdy.lambert.base.BaseTest - Finished test suite: arie_frontend_automation
+2026-01-17 08:00:04 [main] INFO  org.guerdy.lambert.base.BaseTest - ==========================================================================
+2026-01-17 08:00:04 [main] INFO  org.guerdy.lambert.base.BaseTest - ExtentReports flushed in AfterSuite
